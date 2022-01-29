@@ -8,7 +8,7 @@ const questions = () => {
         {
             type: 'input',
             name: 'name',
-            message: 'Waht is the name of your project?',
+            message: 'What is the name of your project?',
             validate: nameInput =>{
                 if(nameInput) {
                     return true;
@@ -45,7 +45,7 @@ const questions = () => {
         },
         {
             type: 'input',
-            name: 'istall',
+            name: 'install',
             message: 'What are the installation instructions for your project?',
         },
         {
@@ -64,10 +64,16 @@ const questions = () => {
 };
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(`./dist/${fileName}`,generateMarkdown(), err =>  ee && console.log(err))
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+
+};
 
 // Function call to initialize app
 init();
+
+generateMarkdown();
