@@ -11,14 +11,26 @@ function renderLicenseLink(license) {}
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
+function generateMarkdown =(data) => {
   return `# ${data.title}
 
   ## Description
+  ${name}
+
+  ${about}
 
   ## Table of Contents
+  [Installation](#installation)
+  [Usage](#usage)
+  [License](#license)
+  [Contributing](#contributing)
+  [Testing](#testing)
+  [Questions](#questions)
 
   ## Installation
+  The steps below will need to be install before you try to rin the program.
+  ${install}
+
 
   ## Usage
 
@@ -29,6 +41,7 @@ function generateMarkdown(data) {
   ## Testing
 
   ## Questions
+  If you have any questions, please contact me at: https://github.com/${emailInput}
 
 `;
 }

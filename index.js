@@ -63,6 +63,8 @@ const questions = () => {
     ]);
 };
 
+const promptUser = (qs) => inquirer.prompt(qs)
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(`./dist/${fileName}`,generateMarkdown(), err =>  ee && console.log(err))
@@ -76,4 +78,3 @@ function init() {
 // Function call to initialize app
 init();
 
-generateMarkdown();
